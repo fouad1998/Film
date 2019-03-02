@@ -1,0 +1,344 @@
+/* la zone de vidéo */ 
+#fd_ZoneTelespectateur{
+	width: 95%;
+	margin-top: 200px;
+	margin-bottom: 5%;
+	margin-left: 2.5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* zone où le film est representer */
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zoneTousInfo{
+	width: 100%;
+	height: 350px;
+	margin-bottom: 30px;
+	background: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+div#fd_zoneTousInfo div#fd_infoGene{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 83%;
+}
+
+div#fd_zoneTousInfo div#fd_presInfoOptions{
+	width: 100%;
+	height: 17%;
+	background-image: linear-gradient(to bottom, rgba(140,140,140,0.7)20%,rgb(30,30,30));
+	display: flex;
+	align-items: center;
+}
+
+div#fd_zoneTousInfo div#fd_presInfoOptions button.fd_buttonPresOption{
+	margin: 0;
+	color:white;
+	cursor: pointer;
+	padding: 0;
+	text-align: center;
+	font-size: 18px;
+	width: 33.33%;
+	height: 100%;
+	outline: none;
+
+}
+
+
+div#fd_zoneTousInfo div#fd_presInfoOptions button.fd_buttonPresOption:hover{
+	background: rgba(0,0,0,0.9);
+	/*background-image: linear-gradient(to bottom, rgba(190,190,190,0.9)27%,rgb(0,0,0));
+	*/
+}
+
+div#fd_zoneTousInfo div#fd_infoGene div#fd_imgInfo{
+	width: 40%;
+	height: 100%;
+}
+
+div#fd_zoneTousInfo div#fd_infoGene div#fd_imgInfo img{
+	width: 100%;
+	height: 100%;
+}
+div#fd_zoneTousInfo div#fd_infoGene div#fd_infoFor{
+	width: 60%;
+	height: 100%;
+}
+
+div#fd_zoneTousInfo div#fd_infoGene div#fd_infoFor div#fd_infoForTitre{
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-bottom: 1px solid gray;
+}
+
+div#fd_zoneTousInfo div#fd_infoGene div#fd_infoFor div#fd_infoForTitre h4{
+	color:white;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+	width: 100%;
+	height: 20%;
+	margin:0;
+	padding: 10px 0 3px 6px;	
+}
+div#fd_zoneTousInfo div#fd_infoGene div#fd_infoFor div#fd_infoForTitre p{
+	overflow: hidden;
+	font-size: 13px;
+	color:gray;
+	margin: 0;
+	height: 80%;
+	width: 90%;
+	margin-left: 5%;
+	padding: 2px 0 0 0;
+}
+
+/*mdb ici*/
+
+div#fd_evulotionOfMovie{
+	height: 25%;
+	display: flex;
+	align-items: center;
+}
+
+div#fd_evulotionOfMovie div#fd_numericEvo{
+	width: 17%;
+	color:white;
+	font-size: 25px;
+	border: 1px solid white;
+	border-radius: 15%;
+	text-align: center;
+	height: 50%;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#fd_evulotionOfMovie div#fd_numericEvo span{
+	color: #0000FFEE;
+	padding: 1px;
+}
+
+div#fd_evulotionOfMovie div#fd_etoileEvo{
+	width: 70%;
+	height: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+div#fd_evulotionOfMovie div#fd_etoileEvo h5{
+	color: white;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+}
+div#fd_evulotionOfMovie div#fd_etoileEvo div{
+	margin-left: 10px;
+}
+div#fd_evulotionOfMovie div#fd_etoileEvo div span.fd_etoileSpan{
+	color:gray;
+	font-size: 20px;
+	padding: 2px;
+	margin: 2px;
+}
+/* la se trouver la zone de categorier de film */
+div#fd_categoriePartient{
+	height: 25%;
+	width: 100%;
+	border-top: 1px solid gray;
+}
+
+div#fd_categoriePartient ul.fd_ulCategoriePartient{
+	margin:0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+div#fd_categoriePartient ul.fd_ulCategoriePartient li.fd_categorierClass{
+	border: 1px solid white;
+	height: 20%;
+	display: flex;
+	font-size: 14px;
+	align-items: center;
+	padding: 4px;
+	margin: 1px;
+	border-radius: 15%;
+	color:white;
+	font-weight: bold;
+}
+
+div#fd_categoriePartient ul.fd_ulCategoriePartient li.fd_categorierClass:hover{
+	background: white;
+	color: black;
+	border-color: black;
+}
+/* ci-dessous de la presentation */
+#fd_ZoneTelespectateur div#fd_videoZone{
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres{
+	margin-top: 4px;
+	width: 100%;
+	height: 120px;
+	background: rgba(25,25,25,0.8);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	box-shadow: 2px 2px 10px black;
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres div#fd_interactionZone{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-end;
+	height: 80%;
+}
+
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres div#fd_interactionZone span{
+	color:white;
+	font-size: 25px;
+	margin-right: 6%;
+	font-weight: bolder;
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres div#fd_interactionZone div#fd_userChooseInter{
+	margin-top: 10px;
+	display: flex;
+	width: 100%;
+	height: 50px;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	border-top: 2px solid gray;
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres div#fd_interactionZone div#fd_userChooseInter div.fd_likeOrDis{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres div#fd_interactionZone div#fd_userChooseInter div.fd_likeOrDis span.fd_imgInter{
+	margin: 4px;
+	flex: 4;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres div#fd_interactionZone div#fd_userChooseInter div.fd_likeOrDis span img{
+	width: 80%;
+	height: 80%;
+	cursor: pointer;
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone div#fd_zonePres h3{
+	width: 80%;
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+	margin: 0;
+	padding-top: 8px; 
+	margin-left: 5%; 
+}
+
+#fd_ZoneTelespectateur div#fd_videoZone video{
+	width: 100%;
+	box-shadow: 2px 2px 10px black;
+}
+
+#fd_ZoneTelespectateur div#fd_suggestionZone{
+	width: 20%;
+}
+
+#fd_ZoneTelespectateur div#fd_suggestionZone ul{
+	display: flex;
+	flex-direction: column;
+	margin:0;
+	padding: 0;
+	width: 100%;
+}
+
+#fd_ZoneTelespectateur div#fd_suggestionZone ul li.fd_eltSuggest{
+	margin: 5px;
+	width: 100%;
+	height: 140px;
+	z-index: 2;
+	overflow: hidden;
+	position: relative;
+}
+
+#fd_ZoneTelespectateur div#fd_suggestionZone ul li.fd_eltSuggest div:hover{
+	transform: scale(1.1);
+	transition: 0.5s ease-in;
+}
+
+#fd_ZoneTelespectateur div#fd_suggestionZone ul li.fd_eltSuggest:before{
+	content: '';
+	position: absolute;
+	background: linear-gradient(to bottom, rgba(150,150,150,0.1), rgba(0,0,0,0.9));
+	z-index: 1;
+}
+#fd_ZoneTelespectateur div#fd_suggestionZone ul li.fd_eltSuggest div{
+	width: 100%;
+	height: 100%;
+}
+
+#fd_ZoneTelespectateur div#fd_suggestionZone ul li.fd_eltSuggest div img{
+	width: 100%;
+	height: 100%;
+}
+
+#fd_ZoneTelespectateur div#fd_suggestionZone ul li.fd_eltSuggest a{
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+
+
+@media screen and (max-width: 1024px){
+	#fd_ZoneTelespectateur{
+		flex-direction: column;
+		margin-top: 100px;
+	}
+
+	#fd_ZoneTelespectateur div#fd_videoZone,#fd_ZoneTelespectateur div#fd_suggestionZone{
+		width: 100%;
+	}
+
+	#fd_ZoneTelespectateur div#fd_suggestionZone ul#fd_ulSuggestionZone{
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: 5px;
+	}
+	#fd_ZoneTelespectateur div#fd_suggestionZone ul#fd_ulSuggestionZone li.fd_eltSuggest{
+		margin: 0;
+		margin-bottom: 4px;
+		width: 33.33%;
+		height: 220px;
+	}
+}

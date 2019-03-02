@@ -1,0 +1,465 @@
+body{
+	background: rgba(170,170,170,0.8);
+}
+/* tous d'abord le menu pour les films */
+#fd_menuMobile, #fd_targetMenuMobile{
+	display: none;
+}
+
+#fd_menu{
+	height: 150px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: url('../img/6.jpg');
+	background-position: bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat; 
+	z-index: 10; 
+}
+
+#fd_menu div:nth-child(1){
+	margin-top: 60px;
+	width: 100%;
+	height: 90px;
+	background-color: white;
+	display: flex;
+}
+
+#fd_menu div span#fd_categorie{
+	font-size: 30px;
+	padding: 5px;
+	align-self: flex-end;
+}
+
+#fd_titrePageFilm{
+	height: 100%;
+	width: 20%;
+}
+
+#fd_titrePageFilm a{
+	color:green;
+	width: 100%;
+	height: 100%;
+	font-size: 25px;
+	font-family: 'ani';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* le diapo de films */
+#fd_diapo{
+	margin-top: 220px;
+	margin-bottom: 50px;
+	width: 90%;
+	margin-left: 5%;
+	height: 250px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+#fd_diapo ul#fd_ulDiapo{
+	display: flex;
+	margin: 0;
+	padding: 0;
+	height: 90%;
+	width: 300%;
+}
+
+#fd_diapo ul#fd_ulDiapo li.fd_EltOfFilmLi{
+	display: inline-block;
+	margin: 8px;
+	width: calc(100%/12);
+	height: 98%;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+#fd_diapo ul#fd_ulDiapo li.fd_EltOfFilmLi div.fd_EltOfFilmLiImg{
+	width: 100%;
+	height: 100%;
+}
+#fd_diapo ul#fd_ulDiapo li.fd_EltOfFilmLi div.fd_EltOfFilmLiImg:before{
+	width: 100%;
+	height: 100%;
+	content: '';
+	position: absolute;
+	z-index: 1;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.1)70%, rgba(0,0,0,0.95)); 
+}
+#fd_diapo ul#fd_ulDiapo li.fd_EltOfFilmLi div.fd_EltOfFilmLiImg img{
+	width: 100%;
+	height: 100%;
+}
+
+#fd_diapo ul#fd_ulDiapo li.fd_EltOfFilmLi a{
+	position: absolute;
+	bottom:5%;
+	z-index: 2;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+#fd_diapo ul#fd_ulDiapo li.fd_EltOfFilmLi div.fd_EltOfFilmLiImg:hover{
+	transform:scale(1.3);
+	transition-duration: 1s;
+}
+/* l'emplacement de tous les film */ 
+
+#fd_listeFilm{
+	display: flex;
+	justify-content: space-around;
+	width: 90%;
+	margin-left: 5%;
+}
+
+#fd_listeFilm section{
+	width: 70%;
+	padding: 0;
+}
+
+#fd_listeFilm section#fd_tabeNeeded{
+	width: 28%;
+}
+
+#fd_listeFilm section ul.fd_ulListeFilm{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	margin:0;
+	padding: 0;
+}
+
+#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi{
+	width: calc(100%/4);
+	position: relative;
+	z-index: 2;
+	height: 250px;
+	margin-bottom: 5px;
+}
+
+#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi div.fd_EltOfFilmLiImg:before{
+	z-index: 1;
+	content: "";
+	width: 98%;
+	position: absolute;
+	height: 98%;
+	background-image: -webkit-linear-gradient(to bottom, rgba(255,255,255,0)60%, rgba(0,0,0,0.95));
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0)60%, rgba(0,0,0,0.95));
+}
+
+#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi:hover .fd_liRealImg{
+	transform: rotate(10deg) scale(1.5);
+	overflow: hidden;
+	transition-duration: 1s;
+}
+#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi div.fd_EltOfFilmLiImg{
+	width: 98%;
+	height: 98%;
+	overflow: hidden;
+	transition: all 1s ease;
+}
+#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi div.fd_EltOfFilmLiImg img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	border: none;
+}
+
+#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi a{
+	position: absolute;
+	z-index: 2;
+	top: 80%;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 10%;
+}
+
+#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi a:hover{
+	transform: scale(1.05);
+	text-decoration: underline;
+}
+
+#fd_listeFilm #fd_tabeNeeded table{
+	width: 100%;
+}
+#fd_listeFilm #fd_tabeNeeded table tbody{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#fd_listeFilm #fd_tabeNeeded table thead tr{
+	text-align: center;
+	height: 40px;
+	font-weight: bolder;
+	background-color: #0d0b17e6;
+	color: white;
+}
+#fd_listeFilm #fd_tabeNeeded table tbody tr{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+
+#fd_tabeNeeded table tbody tr td{
+	width: 90%;
+	margin-left: 10%;
+}
+#fd_tabeNeeded table tbody tr td a{
+	color: black;
+}
+
+
+#fd_listeFilm #fd_tabeNeeded table tbody tr:nth-child(even){
+	background-color: #000000d9;
+	color: white;
+}
+
+#fd_listeFilm #fd_tabeNeeded table tbody tr:nth-child(odd){
+	background-color: #90A4C3;
+}
+
+#fd_listeFilm #fd_tabeNeeded table tbody tr:nth-child(even) td a{
+	color:white;
+}
+
+/* les options de choix dans tous bas de page */
+
+#fd_listOfEltToGet{
+	display: flex;
+	justify-content: center;
+	width: 60%;
+	margin-left: 20%; 
+	margin-top: 5%;
+	margin-bottom: 10%;
+}
+
+#fd_listOfEltToGet button.fd_buttonToGet{
+	width: 4%;
+	height: 30px;
+	margin: 5px;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+	border:none;
+	font-weight: bolder;
+	font-size: 16px;
+	font-family: 'ani';
+}
+
+#fd_listOfEltToGet button.fd_buttonToGet:hover{
+	color: #11CC02;
+	text-decoration: underline;
+}
+
+#fd_listOfEltToGet button.fd_buttonToGet:first-child{
+	width: 16%;
+	display: flex;
+	justify-content: space-around;
+}
+
+#fd_listOfEltToGet button.fd_buttonToGet:last-child{
+	width: 16%;
+	display: flex;
+	justify-content: space-around;
+}
+
+
+/* le sous menu*/
+#fd_sousMenu{
+	position: fixed;
+	top: 110px;
+	left: 0;
+	z-index: 8;
+	background: #999999E6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+}
+
+#fd_sousMenu div{
+	width: 30%;
+	height: 100%;
+	font-size: 14px;
+	display: flex;
+	justify-content: space-between;
+}
+#fd_sousMenu div:hover{
+	background-color: #1F1010CC;
+}
+
+#fd_sousMenu div h3.fd_titreOptionSousMenu{
+	font-size: 14px;
+	color:white;
+	font-family: all;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:0;
+	margin-left: 10%;
+	padding: 0;
+}
+
+#fd_sousMenu div select.fd_optionSousMenu{
+	background: none;
+	border:none;
+	outline: none;
+	color:black;
+	text-align: center;
+	width: 30%;
+	height: 100%;
+	font-weight: bold;
+	border-bottom: 2px solid black;
+}
+
+#fd_sousMenu div select.fd_optionSousMenu:hover{
+	background: black;
+	border:none;
+	outline: none;
+	color:white;
+	border-bottom: 2px solid white;
+}
+#fd_sousMenu div select.fd_optionSousMenu option{
+	background: none;
+	border:none;
+	outline: none;
+	text-align: center;	
+}
+
+
+/* LES BOUTONS DE LE DIAPO */
+.fd_buttonDiap{
+	height: 5%;
+	margin: 0;
+	padding:0;
+	align-items: flex-end;
+}
+
+
+/* LE FOOTER DE PAGE */
+
+footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: #141927d1;
+}
+
+
+footer div{
+	width: 96%;
+}
+
+footer div#fd_footerMessageOther{
+	color:white;
+	font-size: 17px;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 2%;
+
+}
+
+footer div#fd_footerMessageOther div{
+	width: 45%;
+	height: 100%;
+	margin:0;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+footer div#fd_footerMessageOther div#fd_autreDiv h3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	color:black;
+	border-bottom: 2px solid black;
+	letter-spacing: 2mm;
+}
+footer div#fd_footerMessageOther div.fd_footerDivOther{
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 100%;
+}
+
+footer div#fd_footerMessageOther div.fd_footerDivOther div h3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: 30px bolder;
+	letter-spacing: 2mm;
+	width: 100%;
+	border-bottom: 2px solid white;
+}
+
+footer div#fd_footerMessageOther div.fd_footerDivOther div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+}
+
+
+footer div#fd_footerMessageOther div.fd_footerDivOther div div{
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+footer div#fd_footerMessageOther div.fd_footerDivOther div div img{
+	width: 45px;
+	height: 45px;
+	margin: 10px;
+}
+
+footer div#fd_footerParentOther{
+	margin-left: 2%;
+}
+
+footer div#fd_footerParentOther div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+footer div#fd_footerParentOther div h1{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	color:white;
+	font-size: 35px;
+	letter-spacing: 5mm;
+	border-bottom: 2px solid white;
+}
+
+footer div#fd_footerParentOther div p{
+	align-self: flex-end;
+	font-size: 14px;
+	color:white;
+}

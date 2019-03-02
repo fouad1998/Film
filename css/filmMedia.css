@@ -1,0 +1,113 @@
+@media screen and (max-width: 1024px){
+	#fd_listeFilm{
+		width: 98%;
+		margin-left: 1%;
+	}
+
+	#fd_listeFilm section{
+		width: 100%;
+		margin: 0%;
+	}
+
+	#fd_listeFilm section#fd_tabeNeeded{
+		display: none;
+	}
+
+
+	#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi{
+		width: calc(100%/5);
+	}
+	
+	#fd_diapo{
+		width: 98%;
+		margin-left: 1%;
+	}
+	footer div#fd_footerParentOther{
+		display: none;
+	}
+
+	footer div#fd_footerMessageOther{
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	footer div#fd_footerMessageOther div,footer div#fd_footerMessageOther div.fd_footerDivOther{
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 800px){
+	/* tous d'abord le menu*/
+	#fd_menuMobile{
+		display: block;
+	}
+	#fd_menuNav, #fd_divButtonLoupe{
+		display: none;
+	}
+
+	#fd_menu{
+		height: 90px;
+	}
+	#fd_menu div:nth-child(1){
+		margin: 0;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#fd_menu div h1#fd_titrePageFilm{
+		width: 50%;
+		align-self: center;
+	}
+
+	#fd_menu span#fd_categorie{
+		align-self: flex-end;
+	}
+
+	#fd_sousMenu{
+		top:-20px;
+		height: 110px;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+	}
+
+	#fd_sousMenu div{
+		width: 80%;
+		height: 30%;
+		justify-content: space-between;
+	}
+	#fd_sousMenu div h3.fd_titreOptionSousMenu{
+		text-align: left;
+	}
+	#fd_sousMenu div select.fd_optionSousMenu select{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#fd_listeFilm{
+		margin-top: 100px;
+		width: 98%;
+		margin-left: 1%;
+	}
+
+	#fd_listeFilm section{
+		width: 100%;
+		margin:0;
+	}
+
+	#fd_listeFilm section#fd_tabeNeeded{
+		display: none;
+	}
+
+	#fd_listeFilm section ul.fd_ulListeFilm li.fd_EltOfFilmLi{
+		width: calc(100%/3);
+	}
+
+	#fd_diapo ul#fd_ulDiapo{
+		width: 400%;
+	}
+}

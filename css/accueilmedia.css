@@ -1,0 +1,47 @@
+@media screen and (max-width: 1024px){
+	/* les ids*/ 
+	#fd_menu{
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin: 0;
+	}
+
+	
+	.fd_test{
+		margin-top: 5%;
+		border: 2px solid white;
+	}
+
+	#fd_menuNav{
+		min-width: 100px;
+		width: 40%;
+	}
+
+	.fd_parallax{
+		display: none;
+	}
+
+	.fd_filmDivTabe{
+		height: 95%;
+	}
+
+	.fd_filmDivTabe table{
+		justify-content: flex-start;
+	}
+
+	.fd_filmDivTabe table tbody tr{
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.fd_filmDivTabe table tbody tr td{
+		height: 30%;
+		margin: 10px;
+		padding: 0;
+	}
+	.fd_test{
+		margin-top: 5%;
+		border: 2px solid white;
+	}
+}

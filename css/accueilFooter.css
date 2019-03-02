@@ -1,0 +1,90 @@
+footer{
+	background-image: url("../img/footer.jpg");
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* Les ids */
+#fd_footerMessage{
+	margin-top: -2%;
+	color: white;
+	text-align: center;
+	width: 80%;
+}
+
+#fd_footerMessage h1{
+	font-size: 55px;
+	font-family: 'ani';
+	font-weight: bolder;
+	font-style: italic;
+}
+
+#fd_footerMessage h1:hover{
+	color:green;
+	text-shadow: 2px 1px 15px rgba(255,255,255,0.5);
+}
+
+#fd_footerMessage p{
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "futura-pt","Helvetica Neue",sans-serif;
+}
+
+#fd_footerParent{
+	width: 90%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* couté des classes */
+.fd_footerDiv{
+	color: white;
+	width: 30%;
+	margin: 0;
+	border: none;
+	padding: 1%;
+	border-right: 2px solid green;
+}
+
+.fd_footerDiv div img{
+	cursor: pointer;
+	height: 45px;
+	width: 45px;	
+}
+.fd_footer div img:hover{
+	height: 60px;
+	width: 60px;
+}
+.fd_footerDiv div{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+footer .fd_footerDiv:nth-child(3){
+	border-left: 2px solid green;
+	border-right: none;
+}
+
+
+
+/*De media query ici*/
+@media screen and(max-width: 1024px){
+	#fd_footerParent{
+		flex-direction: column;
+	}
+
+	.fd_footerDiv{
+		width: 100%;
+	}
+	.fd_footerDiv div{
+		flex-direction: column;
+	}
+}
