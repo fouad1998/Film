@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Film</title>
+	<link rel="stylesheet" href="../css/accueil.css">
+	<link rel="stylesheet" href="../css/film.css">
+	<link rel="stylesheet" type="text/css" href="../css/visualiseFilm.css">
+	<link rel="stylesheet" type="text/css" href="../css/filmMedia.css">
+</head>
+<body>
+<div id="fd_menu"><!-- Le menu de la page -->
+		<div style="background-image: linear-gradient(to bottom, rgba(70,70,70,0.9)30%,rgba(30,30,30,30.95)">
+			<h1 id="fd_titrePageFilm"><a href="../index.html" >Tchofo</a></h1>	
+			<nav id="fd_menuNav">
+				<ul>
+					<li class="fd_optionMenu"><a href="../index.html"><span>Accueil</span></a></li>
+					<li class="fd_optionMenu"><a href="./film.html"><span>Films</span></a></li>
+					<li class="fd_optionMenu"><a href="./serie.html"><span>Séries</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="fd_divButtonLoupe"><!-- l'icone de barre de rechercher -->
+				<button type="button" id="fd_button">
+					&#x1F50E;
+				</button>
+			</div>
+			
+			<button id="fd_menuMobile"></button>
+			<div id="fd_targetMenuMobile">
+				<nav id="fd_menuNavM">
+					<ul>
+						<li class="fd_optionMenuM"><a href="#"><span>Accueil</span></a></li>
+						<li class="fd_optionMenuM"><a href="#"><span>Films</span></a></li>
+						<li class="fd_optionMenuM"><a href="#"><span>Séries</span></a></li>
+					</ul>
+				</nav>
+
+				<div id="fd_divButtonLoupeM"><!-- l'icone de barre de rechercher -->
+					<button type="button" id="fd_button">
+						&#x1F50E;
+					</button>
+				</div>	
+			</div>
+			<div id="fd_niceMessageShow"></div>
+			<input type="text" name="fd_text" id="fd_inputSearch" style="align-self: center;width: 0; visibility: hidden; height: 40%;font-size: 25px;padding: 2px;">
+
+		</div>
+	</div><!--fin de menu-->
+
+	<div id="fd_ZoneTelespectateur">
+		<div id="fd_videoZone">
+
+			<div id="fd_zoneTousInfo">
+				<div id="fd_infoGene"><!-- l'entête de description -->
+
+					<div id="fd_imgInfo">
+						<img src="../img/film/test2.jpg" alt="nomfilm">	
+					</div>
+					
+					<div id="fd_infoFor">
+						<div id="fd_infoForTitre">
+							<h4>Nom du FIlm</h4>
+							<p>information sur ce film là</p>
+						</div>
+
+						<div id="fd_evulotionOfMovie">
+							<div id="fd_numericEvo">
+								5.3 <span>&#x2605;</span>
+							</div>
+
+							<div id="fd_etoileEvo">
+								<h5>Donner votre avis</h5>
+								<div>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+									<span class="fd_etoileSpan">&#x2605;</span>
+								</div>
+							</div>	
+						</div>
+
+						<div id="fd_categoriePartient">
+							<ul class="fd_ulCategoriePartient">
+								<li class="fd_categorierClass">Horrror</li>
+								<li class="fd_categorierClass">Romance</li>
+								<li class="fd_categorierClass">Action</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div id="fd_presInfoOptions">
+					<button class="fd_buttonPresOption">DESCRIPTION</button>
+					<button class="fd_buttonPresOption">ARTICE</button>
+					<button class="fd_buttonPresOption">IMAGE</button>	
+				</div>	
+			</div><!--- descripion de film ici-->
+
+			<video controls>
+				<source src="/media/video.oga">
+			</video>
+			<div id="fd_zonePres">
+				<h3>Nom du FIlm</h3>
+				<div id="fd_interactionZone">
+					<span> 0 vues</span>
+					<div id="fd_userChooseInter">
+						<div class="fd_likeOrDis">
+							<span>0</span>
+							<span class="fd_imgInter"><img src="../img/like.png" alt=""></span>	
+						</div>
+						<div class="fd_likeOrDis">
+							<span>0</span>
+							<span class="fd_imgInter">
+								<img src="../img/dislike.png" alt="a">
+							</span>
+						</div>	
+					</div>	
+				</div>	
+			</div>
+		</div>
+
+		<div id="fd_suggestionZone">
+			<ul id="fd_ulSuggestionZone">
+				<li class="fd_eltSuggest">
+					<div>
+						<img src="../img/film/test2.jpg" alt="a">	
+					</div>
+					<a href="#" title="nom du film">Nom du film</a>
+				</li>
+				<li class="fd_eltSuggest">
+					<div>
+						<img src="../img/film/test2.jpg" alt="a">	
+					</div>
+					<a href="#" title="nom du film">Nom du film</a>
+				</li>
+				<li class="fd_eltSuggest">
+					<div>
+						<img src="../img/film/test2.jpg" alt="a">	
+					</div>
+					<a href="#" title="nom du film">Nom du film</a>
+				</li>
+				<li class="fd_eltSuggest">
+					<div>
+						<img src="../img/film/test2.jpg" alt="a">	
+					</div>
+					<a href="#" title="nom du film">Nom du film</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<footer>
+		<div id="fd_footerMessageOther">
+			<div id="fd_autreDiv">
+				<h3 style="font-weight:bolder;font-size: 30px;">A PROPOS DE NOUS</h3>
+				C'est un site qui vous offre la possibilité de regarder pesque tous les films et les séries que vous voudrez gratuitement grâce à son répisotorie qui héberge plus de 150,000 Films. Profitez-vous! ;-)	
+			</div>
+			<div class="fd_footerDivOther">
+				<div>
+					<h3>TCHOFO</h3>
+				</div>
+				<div>
+					<h4>Suivez-nous sur les réseaux sociaux</h4>
+					<div>
+						<img class="fd_imgSocial" src="../img/fd__1.png" alt="facebook">
+						<img class="fd_imgSocial" src="../img/fd__2.png" alt="twitter">
+						<img class="fd_imgSocial" src="../img/fd__3.png" alt="instagrame">
+					</div>	
+				</div>
+			</div>	
+		</div>
+
+		<div id="fd_footerParentOther">
+			<div>
+				<h1> Tchofo </h1>
+				<p>Développer par <span style="color: red; font-size: 15px;font-weight: bold;">Fouad HACHOUR</span></p>	
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

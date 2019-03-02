@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="../css/accueil.css">
+	<link rel="stylesheet" type="text/css" href="../css/accueilFooter.css">
+	<link rel="stylesheet" type="text/css" href="../css/film.css">
+	<link rel="stylesheet" type="text/css" href="../css/filmMedia.css">
+</head>
+<body>
+	<div id="fd_menu"><!-- Le menu de la page -->
+		<div style="background-image: linear-gradient(to bottom, rgba(70,70,70,0.9)30%,rgba(30,30,30,30.95));">
+			<h1 id="fd_titrePageFilm"><a href="../index.html" >Tchofo</a></h1>	
+			<nav id="fd_menuNav">
+				<ul>
+					<li class="fd_optionMenu"><a href="../index.html"><span>Accueil</span></a></li>
+					<li class="fd_optionMenu"><a href="./film.html"><span>Films</span></a></li>
+					<li class="fd_optionMenu"><a href="./serie.html"><span>Séries</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="fd_divButtonLoupe"><!-- l'icone de barre de rechercher -->
+				<button type="button" id="fd_button">
+					&#x1F50E;
+				</button>
+			</div>
+			
+			<button id="fd_menuMobile"></button>
+			<div id="fd_targetMenuMobile">
+				<nav id="fd_menuNavM">
+					<ul>
+						<li class="fd_optionMenuM"><a href="#"><span>Accueil</span></a></li>
+						<li class="fd_optionMenuM"><a href="#"><span>Films</span></a></li>
+						<li class="fd_optionMenuM"><a href="#"><span>Séries</span></a></li>
+					</ul>
+				</nav>
+
+				<div id="fd_divButtonLoupeM"><!-- l'icone de barre de rechercher -->
+					<button type="button" id="fd_button">
+						<svg class="jss120 jss115" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg>
+					</button>
+				</div>	
+			</div>
+			<div id="fd_niceMessageShow"></div>
+			<span id="fd_categorie" style="transform: rotate(90deg);color: white;">&#x279B;</span>
+			<input type="text" name="fd_text" id="fd_inputSearch" style="align-self: center;width: 0; visibility: hidden; height: 40%;font-size: 25px;padding: 2px;">
+
+		</div>
+	</div><!--fin de menu-->
+
+	<div id="fd_sousMenu"><!-- le sous menu qui sera afficher pour filtre les rechercher -->
+		<div>
+			<h3 class="fd_titreOptionSousMenu">Type de film</h3>
+			<select name="fd_choiceOfGerneMovie" class="fd_optionSousMenu">
+				<option value="action" selected>ACTION</option>
+				<option value="thriller">THRILLER</option>
+				<option value="drame">DRAME</option>
+				<option value="comidie">COMIDIE</option>
+				<option value="policier">POLICIER</option>
+				<option value="fiction">FICTION</option>
+				<option value="horreur">HORREUR</option>
+				<option value="guerre">GUERRE</option>
+				<option value="aventure">AVENTURE</option>
+				<option value="romance">ROMANCE</option>
+			</select>
+		</div>
+
+		<div>
+			<h3 class="fd_titreOptionSousMenu">
+				Qualité de film
+			</h3>
+			<select name="fd_choiceOfQualite" class="fd_optionSousMenu">
+				<option value="FHD">FULL HD</option>
+				<option value="HD" selected>HD</option>
+				<option value="BLR">BLUERAY</option>
+			</select>
+		</div>
+
+		<div>
+			<h3 class="fd_titreOptionSousMenu">
+				L'année de sortie de film
+			</h3>
+			<select name="fd_choiceOfYear" class="fd_optionSousMenu">
+				<option value="2019" selected>2019</option>
+				<option value="2018">2018</option>
+				<option value="2017">2017</option>
+				<option value="2016">2016</option>
+				<option value="2015">2015</option>
+			</select>	
+		</div>
+
+	</div>
+	
+	<div id="fd_diapo">
+		<div style="align-self: flex-end;">
+			<button class="fd_buttonDia" id="fd_preDia" style="transform: rotate(180deg);font-size: 18px">&#x279B;</button>
+			<button class="fd_buttonDia" style="font-size: 18px" id="fd_nextDia">&#x279B;</button>
+		</div>
+		<ul id="fd_ulDiapo">
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test2.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test2.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test2.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="fd_listeFilm">
+		<section>
+			<ul class="fd_ulListeFilm">
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">Nom du Film</a>
+				</li>
+			</ul>
+		</section>
+
+		<section id="fd_tabeNeeded">
+			<table>
+				<thead>
+					<tr>
+						<td>
+							Millieu Film à regarder	
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">Nom du film</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</section><!-- ici où les élément seront place -->
+	</div>
+
+	<div id="fd_listOfEltToGet">
+		<button class="fd_buttonToGet">< <span>Precedent</span></button>
+		<button class="fd_buttonToGet">1</button>
+		<button class="fd_buttonToGet">2</button>
+		<button class="fd_buttonToGet">3</button>
+		<button class="fd_buttonToGet">4</button>
+		<button class="fd_buttonToGet">5</button>
+		<button class="fd_buttonToGet">...</button>
+		<button class="fd_buttonToGet"><span>Next</span>></button>
+	</div>	
+
+	<footer>
+		
+	</footer>
+
+	<script type="text/javascript" src="../script/jquery.js"></script>
+	<script type="text/javascript" src="../script/film.js"></script>
+	<script type="text/javascript" src="../script/buttonDiapo.js"></script>
+</body>
+</html>

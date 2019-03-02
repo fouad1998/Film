@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="../css/accueil.css">
+	<link rel="stylesheet" type="text/css" href="../css/accueilFooter.css">
+	<link rel="stylesheet" type="text/css" href="../css/film.css">
+	<link rel="stylesheet" type="text/css" href="../css/filmMedia.css">
+</head>
+<body>
+	<div id="fd_menu"><!-- Le menu de la page -->
+		<div style="background-image: linear-gradient(to bottom, rgba(70,70,70,0.9)30%,rgba(30,30,30,30.95)>
+			<h1 id="fd_titrePageFilm"><a href="../index.html" >Tchofo</a></h1>	
+			<nav id="fd_menuNav">
+				<ul>
+					<li class="fd_optionMenu"><a href="../index.html"><span>Accueil</span></a></li>
+					<li class="fd_optionMenu"><a href="./film.html"><span>Films</span></a></li>
+					<li class="fd_optionMenu"><a href="./serie.html"><span>Séries</span></a></li>
+				</ul>
+			</nav>
+
+			<div id="fd_divButtonLoupe"><!-- l'icone de barre de rechercher -->
+				<button type="button" id="fd_button">
+					<img src="../img/fd_loupe.png" alt="loupe">
+				</button>
+			</div>
+			
+			<input type="text" name="fd_text" id="fd_inputSearch" style="width: 0; visibility: hidden; height: 70%;">
+			<button id="fd_menuMobile"></button>
+			<div id="fd_targetMenuMobile">
+				<nav id="fd_menuNavM">
+					<ul>
+						<li class="fd_optionMenuM"><a href="#"><span>Accueil</span></a></li>
+						<li class="fd_optionMenuM"><a href="#"><span>Films</span></a></li>
+						<li class="fd_optionMenuM"><a href="#"><span>Séries</span></a></li>
+					</ul>
+				</nav>
+
+			<div id="fd_divButtonLoupe"><!-- l'icone de barre de rechercher -->
+				<button type="button" id="fd_button">
+					&#x1F50E;
+				</button>
+			</div>
+			</div>
+			<div id="fd_niceMessageShow"></div>
+			<span id="fd_categorie">⤵</span>
+		</div>
+	</div><!--fin de menu-->
+
+	<div id="fd_sousMenu"><!-- le sous menu qui sera afficher pour filtre les rechercher -->
+		<div>
+			<h3 class="fd_titreOptionSousMenu">Type de film</h3>
+			<select name="fd_choiceOfGerneMovie" class="fd_optionSousMenu">
+				<option value="action" selected>ACTION</option>
+				<option value="thriller">THRILLER</option>
+				<option value="drame">DRAME</option>
+				<option value="comidie">COMIDIE</option>
+				<option value="policier">POLICIER</option>
+				<option value="fiction">FICTION</option>
+				<option value="horreur">HORREUR</option>
+				<option value="guerre">GUERRE</option>
+				<option value="aventure">AVENTURE</option>
+				<option value="romance">ROMANCE</option>
+			</select>
+		</div>
+
+		<div>
+			<h3 class="fd_titreOptionSousMenu">
+				Qualité de film
+			</h3>
+			<select name="fd_choiceOfQualite" class="fd_optionSousMenu">
+				<option value="FHD">FULL HD</option>
+				<option value="HD" selected>HD</option>
+				<option value="BLR">BLUERAY</option>
+			</select>
+		</div>
+
+		<div>
+			<h3 class="fd_titreOptionSousMenu">
+				L'année de sortie de film
+			</h3>
+			<select name="fd_choiceOfYear" class="fd_optionSousMenu">
+				<option value="2019" selected>2019</option>
+				<option value="2018">2018</option>
+				<option value="2017">2017</option>
+				<option value="2016">2016</option>
+				<option value="2015">2015</option>
+			</select>	
+		</div>
+
+	</div>
+	
+	<div id="fd_listeFilm">
+		<section>
+			<ul class="fd_ulListeFilm">
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+				<li class="fd_EltOfFilmLi">
+					<div class="fd_EltOfFilmLiImg">
+						<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+					</div>
+					<a href="#" title="nomFilm">nom du Serie</a>
+				</li>
+			</ul>
+		</section>
+
+		<section id="fd_tabeNeeded">
+			<table>
+				<thead>
+					<tr>
+						<td>
+							Millieu Film à regarder	
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" title="nomduFilm">nom du Serie</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>	
+		</section><!-- ici où les élément seront place -->
+	</div>
+
+	<div id="fd_listOfEltToGet">
+		<button class="fd_buttonToGet">< <span>Precedent</span></button>
+		<button class="fd_buttonToGet">1</button>
+		<button class="fd_buttonToGet">2</button>
+		<button class="fd_buttonToGet">3</button>
+		<button class="fd_buttonToGet">4</button>
+		<button class="fd_buttonToGet">5</button>
+		<button class="fd_buttonToGet">...</button>
+		<button class="fd_buttonToGet"><span>Next</span>></button>
+	</div>	
+
+	<footer>
+		<div id="fd_footerMessageOther">
+			<div id="fd_autreDiv">
+				<h3 style="color:red; font-weight:bolder;font-size: 30px;">A PROPOS DE NOUS</h3>
+				C'est un site qui vous offre la possibilité de regarder pesque tous les films et les séries que vous voudrez gratuitement grâce à son répisotorie qui héberge plus de 150,000 Films. Profitez-vous! ;-)	
+			</div>
+			<div class="fd_footerDivOther">
+				<div>
+					<h3>TCHOFO</h3>
+				</div>
+				<div>
+					<h4>Suivez-nous sur les réseaux sociaux</h4>
+					<div>
+						<img class="fd_imgSocial" src="../img/fd__1.png" alt="facebook">
+						<img class="fd_imgSocial" src="../img/fd__2.png" alt="twitter">
+						<img class="fd_imgSocial" src="../img/fd__3.png" alt="instagrame">
+					</div>	
+				</div>
+			</div>	
+		</div>
+
+		<div id="fd_footerParentOther">
+			<div>
+				<h1>-* Tchofo *-</h1>
+				<p>Développer par <span style="color: red; font-size: 15px;font-weight: bold;">Fouad HACHOUR</span></p>	
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="../script/jquery.js"></script>
+	<script type="text/javascript" src="../script/film.js"></script>
+</body>
+</html>
