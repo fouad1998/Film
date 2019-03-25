@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap/dist/bootstrap.css">
 	<link rel="stylesheet" href="../css/accueil.css">
 	<link rel="stylesheet" type="text/css" href="../css/accueilFooter.css">
 	<link rel="stylesheet" type="text/css" href="../css/film.css">
@@ -11,7 +12,7 @@
 </head>
 <body>
 	<div id="fd_menu"><!-- Le menu de la page -->
-		<div style="background-image: linear-gradient(to bottom, rgba(70,70,70,0.9)30%,rgba(30,30,30,30.95)>
+		<div style="background-image: linear-gradient(to bottom, rgba(70,70,70,0.9)30%,rgba(30,30,30,30.95));">
 			<h1 id="fd_titrePageFilm"><a href="../index.html" >Tchofo</a></h1>	
 			<nav id="fd_menuNav">
 				<ul>
@@ -23,11 +24,10 @@
 
 			<div id="fd_divButtonLoupe"><!-- l'icone de barre de rechercher -->
 				<button type="button" id="fd_button">
-					<img src="../img/fd_loupe.png" alt="loupe">
+					&#x1F50E;
 				</button>
 			</div>
 			
-			<input type="text" name="fd_text" id="fd_inputSearch" style="width: 0; visibility: hidden; height: 70%;">
 			<button id="fd_menuMobile"></button>
 			<div id="fd_targetMenuMobile">
 				<nav id="fd_menuNavM">
@@ -38,14 +38,14 @@
 					</ul>
 				</nav>
 
-			<div id="fd_divButtonLoupe"><!-- l'icone de barre de rechercher -->
-				<button type="button" id="fd_button">
-					&#x1F50E;
-				</button>
-			</div>
+				<div id="fd_divButtonLoupeM"><!-- l'icone de barre de rechercher -->
+					<button type="button" id="fd_button">
+					</button>
+				</div>	
 			</div>
 			<div id="fd_niceMessageShow"></div>
-			<span id="fd_categorie">⤵</span>
+			<span id="fd_categorie" style="transform: rotate(90deg);color: white;">&#x279B;</span>
+			<input type="text" name="fd_text" id="fd_inputSearch" style="align-self: center;width: 0; visibility: hidden; height: 40%;font-size: 25px;padding: 2px;">
 		</div>
 	</div><!--fin de menu-->
 
@@ -90,6 +90,87 @@
 			</select>	
 		</div>
 
+	</div>
+
+	<div id="fd_diapo">
+		<div style="width: 100%;display: flex;flex-direction: row;height: 7%;justify-content: space-between;align-items: flex-end;outline: none;">
+			<button class="fd_buttonDia" id="fd_preDia" style="transform: rotate(180deg);">&#x279B;</button>
+			<button class="fd_buttonDia"  id="fd_nextDia">&#x279B;</button>
+		</div>
+		<ul id="fd_ulDiapo">
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test2.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test2.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test2.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+			<li class="fd_EltOfFilmLi">
+				<div class="fd_EltOfFilmLiImg">
+					<img src="../img/film/test.jpg" alt="" class="fd_liRealImg">	
+				</div>
+				<a href="#" title="nomFilm">Nom du Film</a>
+			</li>
+		</ul>
 	</div>
 	
 	<div id="fd_listeFilm">
@@ -249,5 +330,6 @@
 
 	<script type="text/javascript" src="../script/jquery.js"></script>
 	<script type="text/javascript" src="../script/film.js"></script>
+	<script type="text/javascript" src="../script/buttonDiapo.js"></script>
 </body>
 </html>
