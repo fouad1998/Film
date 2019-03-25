@@ -10,126 +10,75 @@ $(document).ready(()=>{
 		return Math.floor(fd_ulDiapo[0].offsetWidth / 12);
 	}
 
-	/*
-	function fd_animteDiapo(obj, position, sense = 1, ptrAnnition = null){
-		let fd_widthOfEltDia = widthOfEltInDiap();//get the width it's necesseray 
-
-		if(position === 0){
-			obj.style.transform = 'translateX(0px)';
-			return;
-		}else if(innerWidth > 800){//choose the position stop
-			if(position >= fd_widthOfEltDia * 8){
-				clearInterval(ptrAnnition);
-			}
-		}else{
-			if(position >= fd_widthOfEltDia * 10){
-				clearInterval(ptrAnnition);
+	//function main of animation diapo
+	function buttonAnimation () {
+		let fd_tmp = widthOfEltInDiap(); // recevoire la taille d'un élément
+		if(innerWidth < 800){
+			if(fd_position < fd_tmp * 10){
+				// translate le diapo par une unité (fd_tmp la taille d'un seul élément de diapo) 
+				fd_ulDiapo.css('transition', '0.8s ease-in').css('transform', 'translateX(' + (-1)*(fd_tmp + fd_position) + 'px)');
+				fd_position += fd_tmp; // position de reférence (continue translate lorsque l'événement est regénérer)				
 			}
 		}
-		obj.style.transform = 'translateX('+ (-1)*position + 'px)';//the transition effect
+		else{
+			if(fd_position < fd_tmp * 8){
+				// translate le diapo par une unité (fd_tmp la taille d'un seul élément de diapo) 
+				fd_ulDiapo.css('transition', '0.8s ease-in').css('transform', 'translateX(' + (-1)*(fd_tmp + fd_position) + 'px)');
+				fd_position += fd_tmp; // position de reférence (continue translate lorsque l'événement est regénérer)				
+			}
+		}
 	}
-	*/
-	//function main of animation diapo
-	function buttonAnimation (fd_thisAni) {
-		// body... 
-		if(fd_thisAni != undefined) clearInterval(fd_thisAni);
-		let fd_tmp = widthOfEltInDiap(); // recevoire la taille d'un élément
-		// translate le diapo par une unité (fd_tmp la taille d'un seul élément de diapo) 
-		fd_ulDiapo.css('transition', '0.8s ease-in').css('transform', 'translateX(' + (-1)*(fd_tmp + fd_position) + 'px)');
-		fd_position += fd_tmp; // position de reférence (continue translate lorsque l'événement est regénérer)
-		/*fd_nextDia.on('click', ()=>{
-			$(this).off('click', buttonAnimation);
-			buttonAnimation();
-		});	*/	
-	}
-	/*
-	function buttonPreAnimation (fd_thisAni) {
-		// body... 
-		let fd_j = 0;
-		clearInterval(fd_thisAni);
+
+	fd_nextDia.on('click', ()=>{
+		buttonAnimation();
+	})
+	
+
+
+	function buttonPreAnimation () {
 		let fd_tmp = widthOfEltInDiap();
+		if(fd_position > 0){
+			fd_ulDiapo.css('transition', '0.8s ease-in').css("transform", 'translateX(' + (-1)*(fd_position - fd_tmp) +'px)');
+			fd_position -= fd_tmp;
+		}
+	}
 
-		let fd_aniAgain = setInterval(()=>{
-			fd_animteDiapo(fd_ulDiapo[0], fd_position + fd_j);
-			if(fd_position <= 1 && fd_tmp != 0){
-				clearInterval(fd_aniAgain);
-				fd_preDia.on('click', ()=>{
-					fd_preDia.off('click', buttonPreAnimation());
-					buttonPreAnimation(fd_thisAni);
-				});
-			}
-			if((-1)*fd_j >= fd_tmp && fd_tmp != 0){
-				clearInterval(fd_aniAgain);
-				fd_position -= fd_tmp;
-				fd_preDia.on('click', ()=>{
-					fd_preDia.off('click', buttonPreAnimation());
-					buttonPreAnimation(fd_thisAni);
-				});
-			}
-			fd_j -= 1;
-		}, 1000/140)
-	}*/
-
+	fd_preDia.on("click", ()=>{
+		buttonPreAnimation();
+	})
 	function mainAni(){
-		/*var fd_thisAni = setInterval(()=>{//begin animation
-			let fd_j = 0;//compteur
+		var fd_thisAni = setInterval(()=>{//begin animation
 			let fd_globalTmp = 0;//width of element in diap
-			fd_globalTmp = widthOfEltInDiap(); // get it
+			fd_tmp = widthOfEltInDiap(); // get it
 
-			if(fd_position >= (fd_globalTmp * 8) && fd_globalTmp != 0){//if the position have 8*width of element in diapo
+			if(fd_position >= (fd_tmp * 8) && fd_tmp != 0){//if the position have 8*width of element in diapo
 				clearInterval(fd_thisAni);
-				let fd_vitesse = 30;
-				let fd_aniEntre = setInterval(()=>{
-					fd_animteDiapo(fd_ulDiapo[0], fd_position)
-					if(fd_position <= 40){
-						fd_vitesse = 5;
-					}
-					if(fd_position <= 10){
-						fd_position = 0;
-						fd_ulDiapo[0].style.transform = 'translateX('+ (-1)*fd_position + 'px)';
-						clearInterval(fd_aniEntre);
-						mainAni();
-					}	
-					fd_position -= fd_vitesse;
-				}, 1000/30);
+				fd_ulDiapo.css('transition', '5s ease-out').css("transform", 'translateX(0px)');
+				fd_position = 0;
 			}else {
-				let fd_vitesse = 6;
-				let fd_otherSpeed = setInterval(()=>{
-					let fd_tmp = widthOfEltInDiap();
-					fd_animteDiapo(fd_ulDiapo[0],fd_position + fd_j, 1, fd_otherSpeed);	
-					if(fd_j >= fd_tmp - 20 && fd_j < fd_tmp - 5){
-						fd_vitesse = 1;
-					}
-					else if(fd_j === fd_tmp && fd_tmp!=0){
-						clearInterval(fd_otherSpeed);
-						fd_j = 0;
-						fd_position += fd_tmp;
-					}
-					fd_j += fd_vitesse;
-				}, 1000/30);
+				fd_ulDiapo.css('transition', '0.8s ease-out').css("transform", 'translateX(' + (-1)*(fd_position + fd_tmp) + 'px)');
+				fd_position += fd_tmp;
 			}
-			
-			window.onresize = ()=>{
-				clearInterval(fd_thisAni);
-				fd_animteDiapo(fd_ulDiapo[0], fd_position);
-			}
-
 		}, 6000);
 
-
+		window.onresize = ()=>{
+			clearInterval(fd_thisAni);
+			fd_ulDiapo.css('transition-duration','0s').css('transform','translateX(0px)');
+			fd_position = 0;
+			mainAni();
+		}
+		
 		fd_diapo[0].onmouseover = ()=>{
 			clearInterval(fd_thisAni);
 		}
-		*/
+		
 		fd_nextDia.on('click', ()=>{
-			//fd_nextDia.off('click', buttonAnimation());
-			buttonAnimation();
+			clearInterval(fd_thisAni)
 		});
 
-		/*fd_preDia.on('click', ()=>{
-			fd_preDia.off("click");
-			buttonPreAnimation(fd_thisAni);
-		});*/
+		fd_preDia.on('click', ()=>{
+			clearInterval(fd_thisAni);
+		});
 	}
 	
 	mainAni();
