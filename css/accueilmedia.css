@@ -1,4 +1,4 @@
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 800px){
 	/* les ids*/ 
 	#fd_menu{
 		position: fixed;
@@ -28,6 +28,12 @@
 
 	.fd_filmDivTabe table{
 		justify-content: flex-start;
+	}
+
+	.fd_filmDivTabe table tbody{
+		display: flex;
+		justify-content:flex-start;
+		flex-wrap: wrap; 
 	}
 
 	.fd_filmDivTabe table tbody tr{

@@ -1,0 +1,57 @@
+#fd_sousMenu {
+    display: none;
+    height: 40px;
+    margin-top: 20px;
+    border-top: 2px solid #1e9a9b;
+    padding-top: 10px;
+}
+
+#fd_sousMenu div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30px;
+    font-size: 15px;
+}
+
+.fd_titreOptionSousMenu {
+    font-weight: bolder;
+}
+
+.fd_optionSousMenu {
+    color: #1e9a9b;
+    font-weight: bold;
+}
+
+.fd_titreOptionSousMenu,
+.fd_optionSousMenu {
+    font-size: 15px;
+    background: none;
+    border: none;
+}
+
+@media screen and (max-width: 800px) {
+    #fd_ulDiapo {
+        width: 400%;
+    }
+}
+
+#fd_IamHereSql {
+    color: whitesmoke;
+    background-color: #1e9a9b;
+}
+
+@media screen and (max-width: 400px) {
+    #fd_diapo {
+        height: 200px;
+    }
+    #fd_ulDiapo {
+        width: 622%;
+    }
+}
+
+@media (max-width: 900px) {
+    #barre {
+        margin-left: 12.5%;
+    }
+}

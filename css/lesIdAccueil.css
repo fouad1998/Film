@@ -1,0 +1,133 @@
+@keyframes animateur_diapo_beau {
+    0% {
+        background-image: url('../img/14.jpg');
+    }
+    22% {
+        filter: blur(4px);
+    }
+    40% {
+        filter: blur(0);
+        background-image: url("../img/15.jpg");
+    }
+    50% {
+        filter: blur(5px);
+    }
+    70% {
+        filter: blur(1px);
+        background-image: url("../img/16.jpg");
+    }
+    80% {
+        filter: blur(4px);
+    }
+    85% {
+        filter: blur(0);
+        background-image: url("../img/17.png");
+    }
+    92% {
+        filter: blur(8px);
+    }
+    100% {
+        filter: blur(0);
+        background-image: url("../img/14.jpg");
+    }
+}
+
+#fd_menu {
+    display: flex;
+    height: 80px;
+    z-index: 40;
+    background: whitesmoke;
+}
+
+#fd_parent_diapo_beau {
+    position: relative;
+    margin-top: 4px;
+    width: 100%;
+    height: 540px;
+    padding: 0;
+    margin: 0;
+    animation-name: animateur_diapo_beau;
+    animation-duration: 30s;
+    animation-fill-mode: inherit;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+#fd_diapo {
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+#fd_ulDiapo {
+    width: 300%;
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    margin-top: 20px;
+    margin: 0;
+    margin-top: 2.5%;
+    padding: 0;
+}
+
+#fd_searchPlace {
+    height: 180px;
+    width: 100%;
+    position: fixed;
+    top: -190px;
+    padding: 20px 0 20px 0;
+    /*display: flex;
+    justify-content: center;
+    flex-direction: column;*/
+    background: whitesmoke;
+    transition: 1s ease-in-out;
+    z-index: 50;
+}
+
+#fd_menuMobile {
+    position: absolute;
+    top: 74px;
+    left: -100%;
+    width: 100%;
+    height: 558px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    z-index: 40;
+    transition: 0.5s ease-in-out;
+    background: whitesmoke;
+    font-size: 40px;
+    font-family: "ani";
+    color: black;
+}
+
+#fd_menuMobile div a {
+    color: black;
+}
+
+#fd_menuMobile div a:hover {
+    color: #1e9a9b;
+}
+
+@media screen and (max-width: 800px) {
+    #fd_ulDiapo {
+        width: 400%;
+    }
+    #barre {
+        margin-left: 12.5%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #fd_diapo {
+        height: 200px;
+    }
+    #fd_ulDiapo {
+        width: 622%;
+    }
+    #barre {
+        margin-left: 12.5%;
+    }
+}

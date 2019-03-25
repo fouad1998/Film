@@ -110,4 +110,20 @@
 	#fd_diapo ul#fd_ulDiapo{
 		width: 400%;
 	}
+
+		/* AFFICHER LE BOUTON DE INTERFACE MOBILE */
+	button#fd_menuMobile{
+		display: block;
+		color: white;
+		cursor: pointer;
+		max-width: 100px;
+	}
+
+	div#fd_menu{
+		justify-content: center;
+	}
+
+	div#fd_newSpace{
+		display: none;
+	}
 }

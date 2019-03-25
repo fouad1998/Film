@@ -1,0 +1,100 @@
+.fd_parallax {
+    position: relative;
+    min-height: 500px;
+    height: 600px;
+    max-height: 700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.glyphicon {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.glyphicon:hover {
+    color: #1e9a9b;
+}
+
+.fd_optionMenu a {
+    color: black;
+}
+
+.fd_optionMenu a:hover {
+    color: #1e9a9b;
+    text-decoration: none;
+}
+
+.carousel-inner>.item>img {
+    width: 100%;
+    height: 100%;
+}
+
+.fd_elt {
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+.fd_nomFilm {
+    color: black;
+    width: 100%;
+    display: block;
+    font-size: 22px;
+    text-align: center;
+}
+
+.fd_autre {
+    height: 830px;
+    margin-bottom: 50px;
+}
+
+.fd_EltOfFilmLi {
+    position: relative;
+    height: 100%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.fd_EltOfFilmLi a {
+    position: absolute;
+    bottom: 3%;
+    color: white;
+    font-size: 25px;
+    display: block;
+    text-align: center;
+}
+
+.fd_EltOfFilmLiImg {
+    height: 100%;
+}
+
+.glyphicon-search:hover {
+    color: #1e9a9b;
+}
+
+.buttonPevote {
+    position: absolute;
+    top: 40%;
+    height: 50px;
+    font-size: 50px;
+    z-index: 20;
+}
+
+.fd_clickToMe {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+    .fd_EltOfFilmLi {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .buttonPevote {
+        font-size: 25px;
+    }
+}
